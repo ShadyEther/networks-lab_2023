@@ -5,6 +5,10 @@
 
 int main(int siz,char* argv[])
 {
+    if(siz!=3){
+        perror("Usage: ./<filename>.c <IPaddress> <portnumber>");
+        exit(1);
+    }
     int sockfd;
     if((sockfd=socket(AF_INET,SOCK_DGRAM,0))==-1){
         perror("socket creation error!--\n");

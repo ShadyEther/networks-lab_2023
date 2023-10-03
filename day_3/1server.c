@@ -11,13 +11,17 @@ int main()
         perror("Socket creation error\n");
         exit(1);
     }
+
     //address creation
     char ip[100];
     int port;
+
+
     printf("Enter ip to host: ");
     scanf(" %[^\n]c%*c",ip);
     printf("enter port: ");
     scanf("%d",&port);
+    
     struct sockaddr_in serverAddr,theirAddr;
 
     serverAddr.sin_family=AF_INET;
